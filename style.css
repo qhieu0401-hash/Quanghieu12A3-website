@@ -1,11 +1,12 @@
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    background: linear-gradient(to right, #4facfe, #00f2fe);
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    color: white;
 }
 
 .navbar {
-    background: #111;
+    background: rgba(0,0,0,0.7);
     padding: 15px;
     text-align: center;
 }
@@ -15,10 +16,11 @@ body {
     margin: 0 20px;
     text-decoration: none;
     font-weight: bold;
+    transition: 0.3s;
 }
 
 .navbar a:hover {
-    color: yellow;
+    color: #00f2fe;
 }
 
 .container {
@@ -26,19 +28,33 @@ body {
     text-align: center;
 }
 
+.subtitle {
+    color: #00f2fe;
+}
+
 .avatar {
-    width: 150px;
+    width: 160px;
     border-radius: 50%;
-    margin: 20px 0;
+    border: 3px solid #00f2fe;
 }
 
 .card {
-    background: white;
+    background: rgba(255,255,255,0.1);
     padding: 20px;
     margin: 20px auto;
     width: 60%;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
 }
 
 table {
@@ -47,11 +63,37 @@ table {
 }
 
 th, td {
-    padding: 10px;
-    border: 1px solid #ddd;
+    padding: 12px;
+    border: 1px solid rgba(255,255,255,0.2);
 }
 
 th {
-    background: #007BFF;
-    color: white;
+    background: #00f2fe;
+    color: black;
+}
+
+input, textarea {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #00f2fe;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00c6ff;
+}
+
+.fade-in {
+    animation: fade 1s ease-in;
+}
+
+@keyframes fade {
+    from {opacity: 0;}
+    to {opacity: 1;}
 }
